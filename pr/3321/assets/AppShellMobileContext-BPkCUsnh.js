@@ -1,0 +1,1 @@
+import{ah as e}from"./iframe-8NSDiC6U.js";const o={isMobile:!1,isMobileNavOpen:!1,toggleMobileNav:()=>{},openMobileNav:()=>{},closeMobileNav:()=>{},isMobileNavEnabled:!1,hasAutoToggle:!0},l=e.createContext(o);l.displayName="AppShellMobileContext";function t(){return e.use(l)}export{l as A,t as u};

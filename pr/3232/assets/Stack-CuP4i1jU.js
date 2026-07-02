@@ -1,0 +1,28 @@
+import{af as x,ah as b,a6 as T,ay as q}from"./iframe-fBpDkZ7d.js";import{s as z}from"./stack.stylex-BlarxY2N.js";function u({direction:e="vertical",hAlign:p,vAlign:d,justify:s,align:r,gap:l,width:n,height:t,maxWidth:a,minHeight:i,wrap:o,as:g="div",xstyle:f,className:y,style:h,children:v,ref:k,...w}){const c=p??(e==="horizontal"?s:r),m=d??(e==="horizontal"?r:s),A=x(...z({direction:e,crossAlign:e==="horizontal"?m:c,mainAlign:e==="horizontal"?c:m,gap:l,wrap:o}),f),S={...n!=null&&{width:typeof n=="number"?`${n}px`:n},...t!=null&&{height:typeof t=="number"?`${t}px`:t},...a!=null&&{maxWidth:typeof a=="number"?`${a}px`:a},...i!=null&&{minHeight:typeof i=="number"?`${i}px`:i}};return b.createElement(g,{ref:k,...T(q("stack",{direction:e,gap:l,wrap:o}),A,y,{...h,...S}),...w},v)}u.displayName="Stack";u.__docgenInfo={description:`Unified stack component for arranging items in a horizontal or vertical layout.
+
+Replaces \`HStack\` and \`VStack\` with a single component that accepts
+a \`direction\` prop. Defaults to \`'vertical'\` since most layouts stack
+top-to-bottom.
+
+The \`hAlign\` and \`vAlign\` props automatically map to the correct CSS axis
+based on the direction:
+- \`direction='horizontal'\`: hAlign → justify-content, vAlign → align-items
+- \`direction='vertical'\`: hAlign → align-items, vAlign → justify-content
+
+@example
+\`\`\`
+<Stack gap={2}>
+  <Item />
+  <Item />
+</Stack>
+<Stack direction="horizontal" gap={4} vAlign="center">
+  <Item />
+  <Item />
+</Stack>
+\`\`\``,methods:[],displayName:"Stack",props:{xstyle:{required:!1,tsType:{name:"StyleXStyles"},description:"StyleX styles created via `stylex.create()`. Merged with the component's\nbase styles inside a single `stylex.props()` call for optimal deduplication.\n\n@example\n```\nconst overrides = stylex.create({ root: { marginBottom: 8 } });\n<Component xstyle={overrides.root} />\n```"},ref:{required:!1,tsType:{name:"ReactRef",raw:"React.Ref<HTMLElement>",elements:[{name:"HTMLElement"}]},description:"Ref forwarded to the root element"},direction:{required:!1,tsType:{name:"unknown"},description:"Direction of the stack layout.\n- `horizontal`: Items flow left-to-right (like HStack)\n- `vertical`: Items flow top-to-bottom (like VStack)\n@default 'vertical'",defaultValue:{value:"'vertical'",computed:!1}},hAlign:{required:!1,tsType:{name:"union",raw:"StackMainAlignment | StackCrossAlignment",elements:[{name:"unknown"},{name:"unknown"}]},description:"Horizontal alignment of items.\n- When `direction='horizontal'`: controls main-axis (justify-content).\n  Accepts: `'start' | 'center' | 'end' | 'between' | 'around' | 'evenly'`\n- When `direction='vertical'`: controls cross-axis (align-items).\n  Accepts: `'start' | 'center' | 'end' | 'stretch'`"},vAlign:{required:!1,tsType:{name:"union",raw:"StackMainAlignment | StackCrossAlignment",elements:[{name:"unknown"},{name:"unknown"}]},description:"Vertical alignment of items.\n- When `direction='horizontal'`: controls cross-axis (align-items).\n  Accepts: `'start' | 'center' | 'end' | 'stretch'`\n- When `direction='vertical'`: controls main-axis (justify-content).\n  Accepts: `'start' | 'center' | 'end' | 'between' | 'around' | 'evenly'`"},justify:{required:!1,tsType:{name:"unknown"},description:"Main-axis alignment alias. Resolves based on `direction`:\n- `horizontal` → `hAlign` (justify-content)\n- `vertical` → `vAlign` (justify-content)\n\nMirrors CSS `justify-content` / Tailwind `justify-*`."},align:{required:!1,tsType:{name:"unknown"},description:"Cross-axis alignment alias. Resolves based on `direction`:\n- `horizontal` → `vAlign` (align-items)\n- `vertical` → `hAlign` (align-items)\n\nMirrors CSS `align-items` / Tailwind `items-*`."},width:{required:!1,tsType:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}]},description:`Width of the stack container.
+Numbers are treated as pixels, strings are used as-is (e.g., '100%').`},height:{required:!1,tsType:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}]},description:`Height of the stack container.
+Numbers are treated as pixels, strings are used as-is (e.g., '100%').`},maxWidth:{required:!1,tsType:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}]},description:`Maximum width of the stack container.
+Numbers are treated as pixels, strings are used as-is (e.g., '100%').`},minHeight:{required:!1,tsType:{name:"union",raw:"number | string",elements:[{name:"number"},{name:"string"}]},description:`Minimum height of the stack container.
+Numbers are treated as pixels, strings are used as-is (e.g., '100%').`},gap:{required:!1,tsType:{name:"union",raw:"0 | 0.5 | 1 | 1.5 | 2 | 3 | 4 | 5 | 6 | 8 | 10",elements:[{name:"literal",value:"0"},{name:"literal",value:"0.5"},{name:"literal",value:"1"},{name:"literal",value:"1.5"},{name:"literal",value:"2"},{name:"literal",value:"3"},{name:"literal",value:"4"},{name:"literal",value:"5"},{name:"literal",value:"6"},{name:"literal",value:"8"},{name:"literal",value:"10"}]},description:`Spacing between items.
+Accepts numeric spacing steps: 0, 0.5, 1, 1.5, 2, 3, 4, 5, 6, 8, 10.`},wrap:{required:!1,tsType:{name:"unknown"},description:"Whether items should wrap.\n- `nowrap`: Items stay on one line (default)\n- `wrap`: Items wrap to next line\n- `wrap-reverse`: Items wrap to previous line\n@default 'nowrap'"},as:{required:!1,tsType:{name:"ElementType"},description:`The element type to render.
+@default 'div'`,defaultValue:{value:"'div'",computed:!1}},children:{required:!1,tsType:{name:"ReactNode"},description:"Content to render inside the stack."}},composes:["Omit"]};export{u as S};
